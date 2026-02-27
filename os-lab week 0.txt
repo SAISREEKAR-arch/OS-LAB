@@ -1,0 +1,200 @@
+
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    printf("    1. Write a program in C to find the second smallest element in an array.\n");
+    printf("enter number of elements in array ");
+    int n;
+    scanf("%d",&n);
+    int arr[20];
+    for (int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    int s1=1000;
+    int s2=1000;
+    for (int j=0;j<n;j++){
+        if (arr[j]<s1){
+            s2=s1;
+            s1=arr[j];
+        }
+        else if (s2>arr[j] && s1!=arr[j]){
+            s2=arr[j];
+        }
+    }
+    printf("the second smallest element from the array is %d ",s2);
+   
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    printf("   5.Write a program in C to find the second largest element in an array..\n");
+    printf("enter number of elements in array ");
+    int n;
+    scanf("%d",&n);
+    int arr[20];
+    for (int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    int b1=-1000;
+    int b2=-1000;
+    for (int j=0;j<n;j++){
+        if (arr[j]>b1){
+            b2=b1;
+            b1=arr[j];
+        }
+        else if (b2<arr[j] && b1!=arr[j]){
+            b2=arr[j];
+        }
+    }
+    printf("the second smallest element from the array is %d ",b2);
+   
+    return 0;
+}
+
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    printf("    6.Write a program in C to delete an element at a desired position from an array.\n");
+    printf("enter number of elements in array ");
+    int n;
+    scanf("%d",&n);
+    int arr[20];
+    for (int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    int pos;
+    printf("enter postion of elememt to delete ");
+    scanf("%d",&pos);
+    if (pos<0 || pos>n){
+        printf("invalid position ");
+        return 1;
+    }
+
+    for (int j=pos;j<n-1;j++){
+        arr[pos]=arr[pos+1];
+    }
+     for (int i=0;i<n-1;i++){
+        printf("%d",arr[i]);
+    }
+    return 0;
+}
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    printf("   3.Write a program in C to find the sum of rows and columns of a matrix.\n");
+    printf("enter number of elements in matrix ");
+    int n;
+    scanf("%d",&n);
+    int arr[n][n];
+    for (int i=0;i<n;i++){
+        for (int j=0;j<n;j++){
+            scanf("%d",&arr[i][j]);
+        }
+    }
+    int r[n],c[n];
+    printf("the matrixis \n");
+    for (int i=0;i<n;i++){
+        for (int j=0;j<n;j++){
+            printf("%d",arr[i][j]);
+        }
+        printf("\n");
+    }
+    int s1,s2=0;
+    for (int i=0;i<n;i++){
+        for (int j=0;j<n;j++){
+            s1=s1+arr[i][j];
+            s2=s2+arr[j][i];
+        }
+        r[i]=s1;
+        s1=0;
+        c[i]=s2;
+        s2=0;
+    }
+    printf("row sums ");
+    for (int i=0;i<n;i++){
+        printf("%d ",r[i]);
+    }
+    printf("\n");
+    printf("coloumn sums ");
+    for (int i=0;i<n;i++){
+        printf("%d ",c[i]);
+    }
+    return 0;
+}
+
+
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    printf("   4.Write a program in C to count the total number of duplicate elements in an array.\n");
+    printf("enter number of elements in array ");
+    int n;
+    scanf("%d",&n);
+    int arr[100];
+    printf("enter elements");
+    for (int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    int count = 0;
+    for (int i = 0; i < n; i++) {
+        for (int j = i + 1; j < n; j++) {
+            if (arr[i] == arr[j]) {
+                count++;
+                break;
+            }
+        }
+    }
+    printf("Total number of duplicate elements: %d\n", count);
+
+    return 0;
+}
+
+
+// Online C compiler to run C program online
+
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    printf("      3.Write a program in C to find the sum of rows and columns of a matrix.\n");
+    printf("enter number of elements in matrix ");
+    int n;
+    scanf("%d",&n);
+    int arr[n][n];
+    for (int i=0;i<n;i++){
+        for (int j=0;j<n;j++){
+            scanf("%d",&arr[i][j]);
+        }
+    }
+    int r[n],c[n];
+    printf("the matrixis \n");
+    for (int i=0;i<n;i++){
+        for (int j=0;j<n;j++){
+            printf("%d",arr[i][j]);
+        }
+        printf("\n");
+    }
+    int s=0;
+    for (int i=0;i<n;i++){
+            s=s+arr[i][i];
+        }
+    printf("\n");
+    printf("left diagolnal sums is %d ",s);
+
+    return 0;
